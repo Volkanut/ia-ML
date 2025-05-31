@@ -1,9 +1,12 @@
 # src/clustering/kmeans.py
 
-import numpy as np
-import pandas as pd
-from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score
+import numpy as np # manejo de arrays y matrices.
+import pandas as pd #manejo de arrays y DataFrames.
+from sklearn.cluster import KMeans # KMeans es un algoritmo de clustering no supervisado.
+# que agrupa los datos en k clusters basados en la distancia euclidiana.
+from sklearn.metrics import silhouette_score # silhouette_score es una métrica que mide la calidad del clustering.
+# Se basa en la distancia entre los puntos dentro de un cluster y la distancia entre los puntos de diferentes clusters.
+#valuar qué tan buenos son los clusters.
 
 def find_optimal_k(
     X: np.ndarray,
